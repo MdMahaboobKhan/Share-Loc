@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<form action="DB.php" method="POST">
+
+<head>
+
+<style>
+body{
+	color: white;
+	background-image: url("img2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+
+<h1><font size="10"> SHARELOC</font></h1>
+<br>
+<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+<div>
+
+
+
+<b>Event:</b><input type="text" name="name"><br><br>
+
+<b>latitude:</b><input type="numbers" name="lat" id="mylat"><br><br>
+
+<b>longitude:</b><input type="numbers" name="lon" id="mylon"><br><br>
+
+<input type="submit" name="submit"value="submit">
+
+</font>
+
+
+<script>
+	
+
+	function post()
+	{
+		
+              navigator.geolocation.getCurrentPosition(function(position) 
+														{
+             
+														          var lon = position.coords.longitude;
+
+												   	               var lat = position.coords.latitude;
+											
+                      document.getElementById("mylat").value = lat;
+
+											                       document.getElementById("mylon").value = lon;
+
+	
+														
+														});
+	
+		
+	}
+	
+	
+post();
+	</script>
+</div>
+
+
+<br><br><br>
+<marquee behaviour="scroll" direction="left" scrollamount="07" onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="05" >
+	<img src="img3.jpg" width="550" height="400" alt="Natural" />
+	<img src="img4.jpg" width="550" height="400" alt="Natural" />
+	<img src="img5.jpg" width="550" height="400" alt="Natural" />
+				
+	<img src="img7.jpg" width="550" height="400" alt="Natural" />
+</marquee>
+
+</body>
+</html>
